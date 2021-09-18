@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:42:25 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 12:56:54 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 13:21:10 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int		ft_parse(char *str);
 typedef struct s_parsed
 {
 	int	parsed;
-}				t_parsed;	
+}				t_parsed;
+
 #endif

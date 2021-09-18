@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:45:44 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 12:41:00 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 13:22:38 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ int	ft_atoi(char *str)
 	{
 		result = result * 10 + (str[i] - 48);
 		i++;
+	}
+	if (result * signe < 0)
+	{
+		return (-1);
 	}
 	return (result * signe);
 }
