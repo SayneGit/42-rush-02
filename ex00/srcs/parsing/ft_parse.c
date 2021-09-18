@@ -15,7 +15,6 @@
 int	ft_parse(char *str)
 {
 	t_parsed		number;
-	int				i;
 	int				first_parse;
 	unsigned int	output;
 

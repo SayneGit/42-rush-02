@@ -11,9 +11,8 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_utils.h"
-#include "../includes/parsed.h"
 
-int	main(int argc, char **argv)
+int	main()
 {
-	// Put code here
+	
 }
