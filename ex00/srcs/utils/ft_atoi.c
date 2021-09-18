@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcadiet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:45:44 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 11:45:45 by pcadiet          ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 12:41:00 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_utils.h"
+#include "../../includes/ft_utils.h"
 
 int	ft_atoi(char *str)
 {

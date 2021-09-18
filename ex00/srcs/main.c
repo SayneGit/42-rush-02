@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcadiet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:44:36 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 11:44:37 by pcadiet          ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 12:57:05 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_utils.h"
+#include "../includes/ft_utils.h"
 
 int	main(int argc, char **argv)
 {
-	return (0);
+	char str[] = "-123456";
+	printf("%d\n", ft_parse(str));
 }
