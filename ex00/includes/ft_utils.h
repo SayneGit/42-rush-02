@@ -26,4 +26,7 @@ typedef struct s_parsed
 	int	parsed;
 }				t_parsed;
 
+# define ARGS_ERROR		"Error\n"
+# define DICT_ERROR		"Dict Error\n"
+
 #endif
