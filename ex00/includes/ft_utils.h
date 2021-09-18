@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:42:25 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 14:31:05 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 14:35:08 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_check_parsing_error(int i);
 int		ft_open_file(char *file_name, int flag);
 
 char	*ft_int_to_string(t_parsed number);
-char	*ft_rev_int_tab(char *tab, int i);
+char	*ft_rev_char_tab(char *tab, int i);
 char	**ft_split(char *str, char *charset);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_read_file(char *file_name, int flag);
