@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils.h                                         :+:      :+:    :+:   */
+/*   ft_errors.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/18 11:42:25 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 14:21:54 by bsouleau         ###   ########lyon.fr   */
+/*   Created: 2021/09/18 14:03:14 by bsouleau          #+#    #+#             */
+/*   Updated: 2021/09/18 14:23:49 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_UTILS_H
-# define FT_UTILS_H
+#include "../../includes/ft_utils.h"
 
-# include <unistd.h>
-
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_atoi(char *str);
-int		ft_parse(char *str);
-int		ft_check_parsing_error(int i);
-
-typedef struct s_parsed
+int	ft_check_parsing_error(int i)
 {
-	int	parsed;
-}				t_parsed;
-
-#endif
+	if (i == -1)
+	{
+		return (0);
+	}
+	return (1);
+}
