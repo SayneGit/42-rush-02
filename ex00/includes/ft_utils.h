@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:42:25 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 14:31:05 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 14:35:08 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_parse(char *str);
 int		ft_check_parsing_error(int i);
 
 char	*ft_int_to_string(t_parsed number);
-char	*ft_rev_int_tab(char *tab, int i);
+char	*ft_rev_char_tab(char *tab, int i);
 char	**ft_split(char *str, char *charset);
 
 typedef struct s_parsed
