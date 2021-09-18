@@ -6,17 +6,17 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:45:44 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 13:22:38 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 17:28:15 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_utils.h"
 
-int	ft_atoi(char *str)
+long int	ft_atoi(char *str)
 {
-	int	i;
-	int	signe;
-	int	result;
+	int			i;
+	int			signe;
+	long int	result;
 
 	i = 0;
 	signe = 1;
@@ -34,7 +34,7 @@ int	ft_atoi(char *str)
 		result = result * 10 + (str[i] - 48);
 		i++;
 	}
-	if (result * signe < 0)
+	if (signe == -1)
 	{
 		return (-1);
 	}

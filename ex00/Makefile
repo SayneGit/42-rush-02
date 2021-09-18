@@ -11,6 +11,7 @@ SOURCES 		= $(SOURCES_FOLDER)utils/ft_putchar.c \
 					$(SOURCES_FOLDER)utils/ft_files.c \
 					$(SOURCES_FOLDER)utils/ft_strcpy.c \
 					$(SOURCES_FOLDER)utils/ft_rev_char_tab.c \
+					$(SOURCES_FOLDER)utils/ft_strcmp.c \
 					$(SOURCES_FOLDER)parsing/ft_parse.c \
 					$(SOURCES_FOLDER)main.c
 

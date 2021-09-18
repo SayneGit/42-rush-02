@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_int_to_string.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgarcia <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 13:28:37 by rgarcia           #+#    #+#             */
-/*   Updated: 2021/09/18 14:09:01 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 15:36:42 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_int_to_string(t_parsed number)
 		i++;
 	}
 	number_string[i] = (number.parsed % 10) + '0';
-	ft_rev_int_tab(number_string, i + 1);
+	ft_rev_char_tab(number_string, i + 1);
 	return (number_string);
 }
