@@ -14,12 +14,16 @@
 # define FT_UTILS_H
 
 # include <unistd.h>
+# include <stdlib.h>
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
+
 int		ft_strlen(char *str);
 int		ft_atoi(char *str);
 int		ft_parse(char *str);
+
+char	**ft_split(char *str, char *charset);
 
 typedef struct s_parsed
 {
