@@ -15,7 +15,7 @@
 
 int	main(int argc, char *argv[])
 {
-	int	result;
+	/*int	result;
 
 	(void) argc;
 	(void) argv;
@@ -24,4 +24,13 @@ int	main(int argc, char *argv[])
 		ft_putstr("error");
 	else
 		printf("%d\n", result);
+
+	char	*file_contents;
+
+	if (argc == 2)
+	{
+		file_contents = ft_read_file(argv[1], O_RDONLY);
+		ft_putstr(file_contents);
+		free(file_contents);
+	}*/
 }

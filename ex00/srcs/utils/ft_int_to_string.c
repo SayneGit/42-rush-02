@@ -19,12 +19,13 @@ typedef struct s_parsed	t_parsed;
 
 char	*ft_int_to_string(t_parsed number)
 {
-	int				i;
-	char			*number_string;
+	int		i;
+	char	*number_string;
 
-	(void) number;
 	i = 0;
 	number_string = malloc(sizeof(char) * (10 + 1));
+	if (!number_string)
+		return (NULL);
 	while (number.parsed >= 10)
 	{
 		number_string[i] = (number.parsed % 10) + '0';

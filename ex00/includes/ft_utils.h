@@ -15,6 +15,12 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
+
+typedef struct s_parsed
+{
+	int	parsed;
+}				t_parsed;
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
@@ -23,15 +29,13 @@ int		ft_strlen(char *str);
 int		ft_atoi(char *str);
 int		ft_parse(char *str);
 int		ft_check_parsing_error(int i);
+int		ft_open_file(char *file_name, int flag);
 
 char	*ft_int_to_string(t_parsed number);
 char	*ft_rev_int_tab(char *tab, int i);
 char	**ft_split(char *str, char *charset);
-
-typedef struct s_parsed
-{
-	int	parsed;
-}				t_parsed;
+char	*ft_strcpy(char *dest, char *src);
+char	*ft_read_file(char *file_name, int flag);
 
 # define ARGS_ERROR		"Error\n"
 # define DICT_ERROR		"Dict Error\n"
