@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:42:25 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 13:21:10 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/18 14:21:54 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_putstr(char *str);
 int		ft_strlen(char *str);
 int		ft_atoi(char *str);
 int		ft_parse(char *str);
+int		ft_check_parsing_error(int i);
 
 char	**ft_split(char *str, char *charset);
 

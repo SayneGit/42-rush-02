@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/18 13:57:07 by bsouleau          #+#    #+#             */
-/*   Updated: 2021/09/18 13:57:16 by bsouleau         ###   ########lyon.fr   */
+/*   Created: 2021/09/18 11:44:36 by pcadiet           #+#    #+#             */
+/*   Updated: 2021/09/18 14:25:44 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_utils.h"
+#include "../includes/ft_utils.h"
+#include <stdio.h>
 
-int	ft_parse(char *str)
+int	main(int argc, char *argv[])
 {
-	t_parsed		number;
-	int				first_parse;
-	unsigned int	output;
+	int	result;
 
-	first_parse = ft_atoi(str);
-	if (!(first_parse == -1))
-	{
-		output = first_parse;
-		number.parsed = output;
-		return (number.parsed);
-	}
-	return (-1);
+	(void) argc;
+	(void) argv;
+	result = ft_parse("-123456");
+	if (!ft_check_parsing_error(result))
+		ft_putstr("error");
+	else
+		printf("%d\n", result);
 }

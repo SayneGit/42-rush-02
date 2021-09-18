@@ -5,6 +5,7 @@ SOURCES 		= $(SOURCES_FOLDER)utils/ft_putchar.c \
 					$(SOURCES_FOLDER)utils/ft_putstr.c \
 					$(SOURCES_FOLDER)utils/ft_strlen.c \
 					$(SOURCES_FOLDER)utils/ft_atoi.c \
+					$(SOURCES_FOLDER)utils/ft_errors.c \
 					$(SOURCES_FOLDER)parsing/ft_parse.c \
 					$(SOURCES_FOLDER)main.c
 

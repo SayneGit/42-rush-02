@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_errors.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/18 13:57:07 by bsouleau          #+#    #+#             */
-/*   Updated: 2021/09/18 13:57:16 by bsouleau         ###   ########lyon.fr   */
+/*   Created: 2021/09/18 14:03:14 by bsouleau          #+#    #+#             */
+/*   Updated: 2021/09/18 14:23:49 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_utils.h"
 
-int	ft_parse(char *str)
+int	ft_check_parsing_error(int i)
 {
-	t_parsed		number;
-	int				first_parse;
-	unsigned int	output;
-
-	first_parse = ft_atoi(str);
-	if (!(first_parse == -1))
+	if (i == -1)
 	{
-		output = first_parse;
-		number.parsed = output;
-		return (number.parsed);
+		return (0);
 	}
-	return (-1);
+	return (1);
 }
