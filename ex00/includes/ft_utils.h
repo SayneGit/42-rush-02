@@ -14,17 +14,24 @@
 # define FT_UTILS_H
 
 # include <unistd.h>
+# include <stdlib.h>
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
+
 int		ft_strlen(char *str);
 int		ft_atoi(char *str);
 int		ft_parse(char *str);
 int		ft_check_parsing_error(int i);
 
+char	**ft_split(char *str, char *charset);
+
 typedef struct s_parsed
 {
 	int	parsed;
 }				t_parsed;
+
+# define ARGS_ERROR		"Error\n"
+# define DICT_ERROR		"Dict Error\n"
 
 #endif
