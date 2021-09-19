@@ -12,11 +12,21 @@
 
 #include "../../includes/ft_utils.h"
 
-void	ft_find_digit(char **file, char *number_string, int index)
+void	ft_find_digit(char **file_contents, char *number_string, int index)
 {
 	char	str[2];
 
 	str[0] = number_string[index];
 	str[1] = '\0';
-	ft_putstr(ft_search_letters(file, str));
+	ft_putstr(ft_search_letters(file_contents, str));
+}
+
+void	ft_find_hundred(char **file_contents)
+{
+	char	str[3];
+
+	str[0] = '0';
+	str[1] = '0';
+	str[2] = '\0';
+	ft_putstr(ft_search_letters(file_contents, str));
 }

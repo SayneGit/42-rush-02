@@ -24,11 +24,13 @@ typedef struct s_parsed
 
 void		ft_putchar(char c);
 void		ft_putstr(char *str);
-void		ft_find_digit(char **file, char *number_string, int index);
+void		ft_find_digit(char **file_contents, char *number_string, int index);
+void		ft_find_hundred(char **file_contents);
 
 long int	ft_atoi(char *str);
 long int	ft_parse(char *str);
 long int	ft_check_parsing_error(int i);
+
 int			ft_open_file(char *file_name, int flag);
 int			ft_strcmp(char *s1, char *s2);
 int			ft_strlen(char *str);
