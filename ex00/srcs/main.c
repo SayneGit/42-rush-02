@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:44:36 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/19 20:55:09 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 21:30:45 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 	int			j;
 
 	(void) argc;
+	i = 0;
 	j = 0;
 	result = ft_parse(argv[1]);
 	number_string = ft_int_to_string(result);
@@ -31,7 +32,6 @@ int	main(int argc, char **argv)
 	ft_algo(dest, number_string);
 	printf("%u\n", result);
 	free(file_contents);
-	i = 0;
 	while (dest[i])
 	{
 		free(dest[i]);
@@ -40,6 +40,6 @@ int	main(int argc, char **argv)
 	while (dest[i][j])
 		j++;
 	free(&dest[i][j]);
-	free(dest);
+	// free(dest);
 	free(number_string);
 }
