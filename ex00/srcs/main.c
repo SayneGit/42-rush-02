@@ -21,7 +21,6 @@ int	main(int argc, char **argv)
 	char		*number_string;
 	int			i;
 
-	i = -1;
 	(void) argc;
 	result = ft_parse(argv[1]);
 	number_string = ft_int_to_string(result);
@@ -29,8 +28,12 @@ int	main(int argc, char **argv)
 	dest = ft_split(file_contents, "\n :");
 	ft_algo(dest, number_string);
 	printf("%u\n", result);
-	while (dest[++i])
+	i = 0;
+	while (dest[i])
+	{
 		free(dest[i]);
+		i += 1;
+	}
 	free(dest);
 	free(file_contents);
 	free(number_string);
