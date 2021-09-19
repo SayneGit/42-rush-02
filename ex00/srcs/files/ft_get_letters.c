@@ -6,27 +6,26 @@
 /*   By: rgarcia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 08:19:22 by rgarcia           #+#    #+#             */
-/*   Updated: 2021/09/19 08:30:09 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 10:33:34 by rgarcia          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_utils.h"
 
-char	*ft_get_letters(char *str, int index)
+char	*ft_get_letters(char *file_line)
 {
-	int		j;
+	int		i;
 	char	*out;
 
-	j = 0;
-	out = malloc(sizeof(char) * ft_strlen(str));
+	i = 0;
+	out = malloc(sizeof(char) * ft_strlen(file_line));
 	if (!out)
 		return (NULL);
-	while (str[index] != '\n')
+	while (file_line[i])
 	{
-		out[j] = str[index];
-		j++;
-		index++;
+		out[i] = file_line[i];
+		i++;
 	}
-	out[j] = '\0';
+	out[i] = '\0';
 	return (out);
 }
