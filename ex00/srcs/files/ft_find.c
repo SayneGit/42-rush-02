@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 10:55:16 by rgarcia           #+#    #+#             */
-/*   Updated: 2021/09/19 17:28:18 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 21:25:48 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,8 @@ void	ft_find_tens(char **file_contents, char *number_string, int index)
 	{
 		str[1] = number_string[index + 1];
 	}
-	str[1] = '0';
+	else
+		str[1] = '0';
 	str[2] = '\0';
 	letters = ft_search_letters(file_contents, str);
 	if (letters != 0)

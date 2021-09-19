@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_algo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgarcia <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 15:28:34 by rgarcia           #+#    #+#             */
-/*   Updated: 2021/09/19 21:21:52 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 21:24:34 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,21 +56,21 @@ void	ft_check(char **file_contents, char *number_string, int i, unsigned int loo
 
 void	ft_algo(char **file_contents, char *number_string)
 {
-	t_parsed count;
+	t_count count;
 	int	i;
 	int	len;
 
-	count.parsed = 0;
+	count.count = 0;
 	i = -1;
 	len = ft_strlen(number_string);
 	while (number_string[++i])
 	{
-		ft_check(file_contents, number_string, i, count.parsed);
-		count.parsed += 1;
-		if (count.parsed == 1 && len > 9)
-			count.parsed = 0;
+		ft_check(file_contents, number_string, i, count.count);
+		count.count += 1;
+		if (count.count == 1 && len > 9)
+			count.count = 0;
 		if (len == 6 || len == 3)
-			count.parsed = 0;
+			count.count = 0;
 		len--;
 	}
 }

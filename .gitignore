@@ -54,3 +54,9 @@ dkms.conf
 # Others
 .DS_Store
 *.swp
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/misc.xml
+.idea/42-rush-02.iml
+ex00/cmake-build-debug/CMakeFiles/clion-log.txt
+ex00/rush-02
