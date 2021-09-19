@@ -6,7 +6,7 @@
 /*   By: rgarcia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 15:28:34 by rgarcia           #+#    #+#             */
-/*   Updated: 2021/09/19 16:04:51 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 21:21:52 by rgarcia          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,25 @@
 
 void	ft_num_as_letter(char **file_cont, char *num_str, int len, int i)
 {
-	if (len == 9 || len == 6 || len == 3)
+	if (num_str[i] != '0')
 	{
-		ft_find_digit(file_cont, num_str, i);
-		ft_find_hundred(file_cont);
+		if (len == 9 || len == 6 || len == 3)
+		{
+			ft_find_digit(file_cont, num_str, i);
+			ft_find_hundred(file_cont);
+		}
+		if (len == 8 || len == 5 || len == 2)
+			ft_find_tens(file_cont, num_str, i);
+		if ((len == 7 || len == 4 || len == 1) && num_str[i - 1] != '1')
+			ft_find_digit(file_cont, num_str, i);
 	}
-	if (len == 8 || len == 5 || len == 2)
-		ft_find_tens(file_cont, num_str, i);
-	if (len == 7 || len == 4 || len == 1)
-		ft_find_digit(file_cont, num_str, i);
 }
 
-void	ft_check(char **file_contents, char *number_string, int i, int len)
+void	ft_check(char **file_contents, char *number_string, int i, unsigned int loops)
 {
+	int	len;
+
+	len = ft_strlen(number_string) - i;
 	if (len > 9)
 	{
 		ft_find_digit(file_contents, number_string, i);
@@ -35,12 +41,14 @@ void	ft_check(char **file_contents, char *number_string, int i, int len)
 	else if (len > 6)
 	{
 		ft_num_as_letter(file_contents, number_string, len, i);
-		ft_find_zeros(file_contents, 6);
-	}	
+		if (loops == 0)
+			ft_find_zeros(file_contents, 6);
+	}
 	else if (len > 3)
 	{
 		ft_num_as_letter(file_contents, number_string, len, i);
-		ft_find_zeros(file_contents, 3);
+		if (loops == 0)
+			ft_find_zeros(file_contents, 3);
 	}
 	else if (len > 0)
 		ft_num_as_letter(file_contents, number_string, len, i);
@@ -48,14 +56,21 @@ void	ft_check(char **file_contents, char *number_string, int i, int len)
 
 void	ft_algo(char **file_contents, char *number_string)
 {
+	t_parsed count;
 	int	i;
 	int	len;
 
+	count.parsed = 0;
 	i = -1;
 	len = ft_strlen(number_string);
 	while (number_string[++i])
 	{
-		ft_check(file_contents, number_string, i, len);
+		ft_check(file_contents, number_string, i, count.parsed);
+		count.parsed += 1;
+		if (count.parsed == 1 && len > 9)
+			count.parsed = 0;
+		if (len == 6 || len == 3)
+			count.parsed = 0;
 		len--;
 	}
 }
