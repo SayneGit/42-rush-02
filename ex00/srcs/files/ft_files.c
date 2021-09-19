@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../../includes/ft_utils.h"
-#include <stdio.h>
 
 int	ft_len_file(int file)
 {
