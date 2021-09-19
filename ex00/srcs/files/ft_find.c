@@ -12,7 +12,7 @@
 
 #include "../../includes/ft_utils.h"
 
-void	ft_find_zero(char **file_contents, int nbrzero)
+void	ft_find_zeros(char **file_contents, int nbrzero)
 {
 	char	str[11];
 	int		i;

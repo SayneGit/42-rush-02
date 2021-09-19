@@ -13,7 +13,7 @@
 #include "../includes/ft_utils.h"
 #include <stdio.h>
 
-void	ft_check_args(int argc, char **argv, int i)
+void	ft_check_args(char **argv, int i)
 {
 	int			result;
 
@@ -23,7 +23,7 @@ void	ft_check_args(int argc, char **argv, int i)
 		ft_putstr(ARGS_ERROR);
 }
 
-void	ft_args(int argc, char **argv, int y)
+char	**ft_args(char **argv, int y)
 {
 	t_parsed	parsed;
 	char		**dest;
@@ -32,26 +32,27 @@ void	ft_args(int argc, char **argv, int y)
 	int			i;
 
 	i = 0;
-	ft_check_args(argc, argv, y);
+	ft_check_args(argv, y);
 	number_string = ft_int_to_string(parsed.parsed);
+	file_contents = ft_read_file("numbers.dict", O_RDONLY);
 	dest = ft_split(file_contents, "\n :");
-	while (dest[i])
-	{
-		printf("%s\n", dest[i]);
-		i++;
-	}
 	free(file_contents);
+	return (dest);
 }
 
 int	main(int argc, char **argv)
 {
+	t_parsed	parsed;
+
 	if (argc == 2)
-		ft_args(argc, argv, 2);
+	{
+		ft_algo(ft_args(argv, 2), ft_int_to_string(parsed.parsed));
+	}
 	else if (argc == 3)
-		ft_args(argc, argv, 3);
+	{
+		ft_algo(ft_args(argv, 3), ft_int_to_string(parsed.parsed));
+	}
 	else
 		ft_putstr(ARGS_ERROR);
 	return (0);
 }
-
-/* ft_algo(dest, number_string) */

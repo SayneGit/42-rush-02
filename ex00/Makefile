@@ -16,6 +16,7 @@ SOURCES 		= $(SOURCES_FOLDER)utils/ft_putchar.c \
 					$(SOURCES_FOLDER)parsing/ft_parse.c \
 					$(SOURCES_FOLDER)parsing/ft_int_to_string.c \
 					$(SOURCES_FOLDER)parsing/ft_errors.c \
+					$(SOURCES_FOLDER)algo/ft_algo.c \
 					$(SOURCES_FOLDER)main.c
 
 OBJS = ${SOURCES:.c=.o} 
@@ -23,7 +24,7 @@ OBJS = ${SOURCES:.c=.o}
 CC      = gcc
 RM      = rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
 
 $(NAME): ${OBJS}
 		gcc ${CFLAGS} -o ${NAME} ${OBJS}

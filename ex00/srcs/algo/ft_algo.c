@@ -17,12 +17,33 @@ void	ft_num_as_letter(char **file_cont, char *num_str, int len, int i)
 	if (len == 9 || len == 6 || len == 3)
 	{
 		ft_find_digit(file_cont, num_str, i);
-		ft_hundred(file_cont);
+		ft_find_hundred(file_cont);
 	}
 	if (len == 8 || len == 5 || len == 2)
-		ft_tens(file_cont, num_str, i);
+		ft_find_tens(file_cont, num_str, i);
 	if (len == 7 || len == 4 || len == 1)
 		ft_find_digit(file_cont, num_str, i);
+}
+
+void	ft_check(char **file_contents, char *number_string, int i, int len)
+{
+	if (len > 9)
+	{
+		ft_find_digit(file_contents, number_string, i);
+		ft_find_zeros(file_contents, 9);
+	}
+	else if (len > 6)
+	{
+		ft_num_as_letter(file_contents, number_string, len, i);
+		ft_find_zeros(file_contents, 6);
+	}	
+	else if (len > 3)
+	{
+		ft_num_as_letter(file_contents, number_string, len, i);
+		ft_find_zeros(file_contents, 3);
+	}
+	else if (len > 0)
+		ft_num_as_letter(file_contents, number_string, len, i);
 }
 
 void	ft_algo(char **file_contents, char *number_string)
@@ -30,28 +51,11 @@ void	ft_algo(char **file_contents, char *number_string)
 	int	i;
 	int	len;
 
-	i = 0;
+	i = -1;
 	len = ft_strlen(number_string);
-	while (number_string[i])
+	while (number_string[++i])
 	{
-		if (len > 9)
-		{
-			ft_find_digit(file_contents, number_string, index);
-			ft_find_zeros(file_contents, 9);
-		}
-		else if (len > 6)
-		{
-			ft_num_as_letter(file_contents, number_string, len, i);
-			ft_find_zeros(file_contents, 6);
-		}
-		else if (len > 3)
-		{
-			ft_num_as_letter(file_contents, number_string, len, i);
-			ft_find_zeros(file_contents, 3);
-		}
-		else if (len > 0)
-			ft_num_as_letter(file_contents, number_string, len, i);
+		ft_check(file_contents, number_string, i, len);
 		len--;
-		i++;
 	}
 }
