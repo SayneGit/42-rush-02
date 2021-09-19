@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_utils.h"
+#include <stdio.h>
 
-int	main(int argc, char *argv)
+/*int	main(int argc, char *argv)
 {
 	unsigned int	result;
 	char			*max;
@@ -54,15 +55,37 @@ int	main(int argc, char *argv)
 					ft_putstr(result);
 			}
 		}
-		/* char	*file_contents;
+		 char	*file_contents;
 
 		if (argc == 2)
 		{
 			file_contents = ft_read_file(argv[1], O_RDONLY);
 			ft_putstr(file_contents);
 			free(file_contents);
-		}*/
+		}
 	}
 	else
 		printf(ARGS_ERROR);
+}*/
+
+int main(int argc, char **argv)
+{
+	char **dest;
+  	int i;
+  	i = 0;
+	char *file_contents;
+
+	file_contents = ft_read_file(argv[1], O_RDONLY);
+
+  	if (argc == 2)
+  	{
+  		dest = ft_split(file_contents, "\n :");
+  		while (dest[i])
+  		{
+  			printf("%s\n", dest[i]);
+  			i++;
+  		};
+ 	}
+	free(file_contents);
+	return 0;
 }
