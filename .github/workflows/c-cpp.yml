@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - working-directory: ex00
-        name: make
-        run: make
+        - name: make
+          run: make
+          working-directory: ex00
+
