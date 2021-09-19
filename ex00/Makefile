@@ -5,16 +5,17 @@ SOURCES 		= $(SOURCES_FOLDER)utils/ft_putchar.c \
 					$(SOURCES_FOLDER)utils/ft_putstr.c \
 					$(SOURCES_FOLDER)utils/ft_strlen.c \
 					$(SOURCES_FOLDER)utils/ft_atoi.c \
-					$(SOURCES_FOLDER)utils/ft_errors.c \
 					$(SOURCES_FOLDER)utils/ft_split.c \
-					$(SOURCES_FOLDER)utils/ft_int_to_string.c \
-					$(SOURCES_FOLDER)utils/ft_files.c \
 					$(SOURCES_FOLDER)utils/ft_strcpy.c \
 					$(SOURCES_FOLDER)utils/ft_rev_char_tab.c \
 					$(SOURCES_FOLDER)utils/ft_strcmp.c \
-					$(SOURCES_FOLDER)utils/ft_get_letters.c \
-					$(SOURCES_FOLDER)utils/ft_search_letters.c \
+					$(SOURCES_FOLDER)utils/ft_find_digit.c \
+					$(SOURCES_FOLDER)files/ft_get_letters.c \
+					$(SOURCES_FOLDER)files/ft_search_letters.c \
+					$(SOURCES_FOLDER)files/ft_files.c \
 					$(SOURCES_FOLDER)parsing/ft_parse.c \
+					$(SOURCES_FOLDER)parsing/ft_int_to_string.c \
+					$(SOURCES_FOLDER)parsing/ft_errors.c \
 					$(SOURCES_FOLDER)main.c
 
 OBJS = ${SOURCES:.c=.o} 

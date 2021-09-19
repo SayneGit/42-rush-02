@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_get_letters.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: rgarcia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/18 13:57:07 by bsouleau          #+#    #+#             */
-/*   Updated: 2021/09/19 09:32:18 by bsouleau         ###   ########lyon.fr   */
+/*   Created: 2021/09/19 08:19:22 by rgarcia           #+#    #+#             */
+/*   Updated: 2021/09/19 10:33:34 by rgarcia          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_utils.h"
 
-long int	ft_parse(char *str)
+char	*ft_get_letters(char *file_line)
 {
-	t_parsed		number;
-	long int		first_parse;
-	long int		output;
+	int		i;
+	char	*out;
 
-	first_parse = ft_atoi(str);
-	if (!(first_parse == -1))
+	i = 0;
+	out = malloc(sizeof(char) * ft_strlen(file_line));
+	if (!out)
+		return (NULL);
+	while (file_line[i])
 	{
-		output = first_parse;
-		number.parsed = output;
-		return (number.parsed);
+		out[i] = file_line[i];
+		i++;
 	}
-	return (-1);
+	out[i] = '\0';
+	return (out);
 }

@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_letters.c                                   :+:      :+:    :+:   */
+/*   ft_find_digit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgarcia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/19 08:19:22 by rgarcia           #+#    #+#             */
-/*   Updated: 2021/09/19 08:30:09 by rgarcia          ###   ########lyon.fr   */
+/*   Created: 2021/09/19 10:55:16 by rgarcia           #+#    #+#             */
+/*   Updated: 2021/09/19 10:58:23 by rgarcia          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ft_utils.h"
 
-char	*ft_get_letters(char *str, int index)
+void	ft_find_digit(char **file, char *number_string, int index)
 {
-	int		j;
-	char	*out;
+	char	str[2];
 
-	j = 0;
-	out = malloc(sizeof(char) * ft_strlen(str));
-	if (!out)
-		return (NULL);
-	while (str[index] != '\n')
-	{
-		out[j] = str[index];
-		j++;
-		index++;
-	}
-	out[j] = '\0';
-	return (out);
+	str[0] = number_string[index];
+	str[1] = '\0';
+	ft_putstr(ft_search_letters(file, str));
 }
