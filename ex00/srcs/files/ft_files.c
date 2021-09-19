@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 14:21:29 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 15:36:50 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 21:28:22 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_open_file(char *file_name, int flag)
 char	*ft_read_file(char *file_name, int flag)
 {
 	char	*file_contents;
-	int		return_value;
+	// int		return_value;
 	int		file;
 	int		file_lenght;
 
@@ -60,7 +60,7 @@ char	*ft_read_file(char *file_name, int flag)
 	file_contents = malloc(sizeof(char) * (file_lenght + 1));
 	if (!file_contents)
 		return (NULL);
-	return_value = read(file, file_contents, file_lenght);
+	// return_value = read(file, file_contents, file_lenght);
 	file_contents[file_lenght] = 0;
 	close(file);
 	return (file_contents);
