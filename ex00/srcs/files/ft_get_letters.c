@@ -6,7 +6,7 @@
 /*   By: rgarcia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 08:19:22 by rgarcia           #+#    #+#             */
-/*   Updated: 2021/09/19 10:33:34 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 15:20:29 by rgarcia          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_get_letters(char *file_line)
 	char	*out;
 
 	i = 0;
-	out = malloc(sizeof(char) * ft_strlen(file_line));
+	out = malloc(sizeof(char) * (ft_strlen(file_line) + 1));
 	if (!out)
 		return (NULL);
 	while (file_line[i])
