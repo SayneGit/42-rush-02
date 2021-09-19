@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 10:55:16 by rgarcia           #+#    #+#             */
-/*   Updated: 2021/09/19 15:26:42 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 17:19:34 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ void	ft_find_zeros(char **file_contents, int nbrzero)
 	}
 	str[i] = '\0';
 	if (ft_search_letters(file_contents, str) != 0)
+	{
 		ft_putstr(ft_search_letters(file_contents, str));
+		ft_putchar(' ');
+	}
 	else
 		ft_putstr(DICT_ERROR);
 }
@@ -38,7 +41,10 @@ void	ft_find_digit(char **file_contents, char *number_string, int index)
 	str[0] = number_string[index];
 	str[1] = '\0';
 	if (ft_search_letters(file_contents, str) != 0)
+	{
 		ft_putstr(ft_search_letters(file_contents, str));
+		ft_putchar(' ');
+	}
 	else
 		ft_putstr(DICT_ERROR);
 }
@@ -52,7 +58,10 @@ void	ft_find_hundred(char **file_contents)
 	str[2] = '0';
 	str[3] = '\0';
 	if (ft_search_letters(file_contents, str) != 0)
+	{
 		ft_putstr(ft_search_letters(file_contents, str));
+		ft_putchar(' ');
+	}
 	else
 		ft_putstr(DICT_ERROR);
 }
@@ -69,7 +78,10 @@ void	ft_find_tens(char **file_contents, char *number_string, int index)
 	str[1] = '0';
 	str[2] = '\0';
 	if (ft_search_letters(file_contents, str) != 0)
+	{
 		ft_putstr(ft_search_letters(file_contents, str));
+		ft_putchar(' ');
+	}
 	else
 		ft_putstr(DICT_ERROR);
 }
