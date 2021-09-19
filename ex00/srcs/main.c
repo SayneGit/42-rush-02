@@ -29,8 +29,9 @@ int	main(int argc, char **argv)
 	dest = ft_split(file_contents, "\n :");
 	ft_algo(dest, number_string);
 	printf("%u\n", result);
-	free(file_contents);
 	while (dest[++i])
 		free(dest[i]);
 	free(dest);
+	free(file_contents);
+	free(number_string);
 }
