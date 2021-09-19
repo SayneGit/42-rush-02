@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	while (dest[i])
 	{
 		free(dest[i]);
-		i += 1;
+		i++;
 	}
 	free(dest);
 	free(number_string);
