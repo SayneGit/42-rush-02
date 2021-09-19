@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:42:25 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/19 08:51:29 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 09:43:53 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,13 @@ int			ft_strlen(char *str);
 char		*ft_get_letters(char *str, int index);
 char		*ft_search_letters(char *file, char *to_find);
 char		*ft_rev_char_tab(char *tab, int size);
-char		*ft_int_to_string(t_parsed number);
+char		*ft_int_to_string(unsigned int number);
 char		*ft_strcpy(char *dest, char *src);
 char		*ft_read_file(char *file_name, int flag);
 char		**ft_split(char *str, char *charset);
 
 # define ARGS_ERROR		"Error\n"
 # define DICT_ERROR		"Dict Error\n"
+# define MAX_UI			"4294967295"
 
 #endif

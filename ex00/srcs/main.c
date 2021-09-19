@@ -6,86 +6,48 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:44:36 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/18 17:34:49 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 09:45:55 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_utils.h"
 #include <stdio.h>
 
-/*int	main(int argc, char *argv)
+void	ft_check_args(int argc, char *argv[])
 {
-	unsigned int	result;
-	char			*max;
+	int			result;
 
-	max = "4294967295";
-	(void) argc;
-	(void) argv;
-	if (!(argc == 1))
+	if (argc == 2)
 	{
-		if (argc == 2)
-		{
-			if (argv[1] == max)
-			{
-				ft_putstr(ARGS_ERROR);
-				return (0);
-			}
-			else
-			{
-				result = ft_parse(argv[1]);
-				if (!ft_check_parsing_error(result))
-					ft_putstr(ARGS_ERROR);
-				else
-					ft_putstr(result);
-			}
-		}
-		if (argc == 3)
-		{
-			if (argv[2] == max)
-			{
-				ft_putstr(ARGS_ERROR);
-				return (0);
-			}
-			else
-			{
-				result = ft_parse(argv[2]);
-				if (!ft_check_parsing_error(result))
-					ft_putstr(ARGS_ERROR);
-				else
-					ft_putstr(result);
-			}
-		}
-		 char	*file_contents;
-
-		if (argc == 2)
-		{
-			file_contents = ft_read_file(argv[1], O_RDONLY);
-			ft_putstr(file_contents);
-			free(file_contents);
-		}
+		ft_parse(argv[2]);
+		result = ft_parse(argv[2]);
+		if (!ft_check_parsing_error(result))
+			ft_putstr(ARGS_ERROR);
 	}
-	else
-		printf(ARGS_ERROR);
-}*/
+}
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	char **dest;
-  	int i;
-  	i = 0;
-	char *file_contents;
+	t_parsed	parsed;
+	char		**dest;
+	char		*file_contents;
+	char		*number_string;
+	int			i;
 
+	i = 0;
 	file_contents = ft_read_file(argv[1], O_RDONLY);
-
-  	if (argc == 2)
-  	{
-  		dest = ft_split(file_contents, "\n :");
-  		while (dest[i])
-  		{
-  			printf("%s\n", dest[i]);
-  			i++;
-  		};
- 	}
+	if (argc == 2)
+	{
+		ft_check_args(argc, argv);
+		number_string = ft_int_to_string(parsed.parsed);
+		dest = ft_split(file_contents, "\n :");
+		while (dest[i])
+		{
+			printf("%s\n", dest[i]);
+			i++;
+		}	
+	}
+	// ft_algo(dest, number_string)
 	free(file_contents);
-	return 0;
+	return (0);
 }
