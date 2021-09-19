@@ -11,9 +11,8 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_utils.h"
-#include <stdio.h>
 
-int	main(int argc, char *argv[])
+int	main(int argc, char *argv)
 {
 	unsigned int	result;
 	char			*max;
@@ -36,7 +35,7 @@ int	main(int argc, char *argv[])
 				if (!ft_check_parsing_error(result))
 					ft_putstr(ARGS_ERROR);
 				else
-					printf("%u\n", result);
+					ft_putstr(result);
 			}
 		}
 		if (argc == 3)
@@ -52,7 +51,7 @@ int	main(int argc, char *argv[])
 				if (!ft_check_parsing_error(result))
 					ft_putstr(ARGS_ERROR);
 				else
-					printf("%u\n", result);
+					ft_putstr(result);
 			}
 		}
 		/* char	*file_contents;
