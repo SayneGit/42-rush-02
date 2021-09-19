@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:42:25 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/19 16:03:53 by rgarcia          ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 19:30:28 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # include <stdlib.h>
 # include <fcntl.h>
 
-typedef struct s_parsed
+typedef struct s_count
 {
-	unsigned int	parsed;
-}				t_parsed;
+	int	count;
+}				t_count;
 
 void		ft_putchar(char c);
 void		ft_putstr(char *str);
@@ -46,6 +46,7 @@ char		*ft_int_to_string(unsigned int number);
 char		*ft_strcpy(char *dest, char *src);
 char		*ft_read_file(char *file_name, int flag);
 char		**ft_split(char *str, char *charset);
+
 
 # define ARGS_ERROR		"Error\n"
 # define DICT_ERROR		"Dict Error\n"
