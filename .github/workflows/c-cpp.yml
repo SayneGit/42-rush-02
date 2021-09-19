@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - working-directory: dart_project
+      - working-directory: ex00
         name: make
         run: make
