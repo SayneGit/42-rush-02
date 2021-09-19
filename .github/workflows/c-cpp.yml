@@ -13,6 +13,5 @@ jobs:
 
     steps:
         - name: make
-          run: make
           working-directory: ex00
-
+          run: make
