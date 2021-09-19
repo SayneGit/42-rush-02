@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 	while (dest[i])
 	{
 		free(dest[i]);
-		i += 1;
+		i++;
 	}
 	while (dest[i][j])
 		j++;

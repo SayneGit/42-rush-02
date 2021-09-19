@@ -31,13 +31,10 @@ void	ft_find_zeros(char **file_contents, int nbrzero)
 	{
 		ft_putstr(letters);
 		ft_putchar(' ');
-		free(letters);
 	}
 	else
-	{
-		free(letters);
 		ft_putstr(DICT_ERROR);
-	}
+	free(letters);
 }
 
 void	ft_find_digit(char **file_contents, char *number_string, int index)
@@ -52,13 +49,10 @@ void	ft_find_digit(char **file_contents, char *number_string, int index)
 	{
 		ft_putstr(letters);
 		ft_putchar(' ');
-		free(letters);
 	}
 	else
-	{
-		free(letters);
 		ft_putstr(DICT_ERROR);
-	}
+	free(letters);
 }
 
 void	ft_find_hundred(char **file_contents)
@@ -75,13 +69,10 @@ void	ft_find_hundred(char **file_contents)
 	{
 		ft_putstr(letters);
 		ft_putchar(' ');
-		free(letters);
 	}
 	else
-	{
-		free(letters);
 		ft_putstr(DICT_ERROR);
-	}
+	free(letters);
 }
 
 void	ft_find_tens(char **file_contents, char *number_string, int index)
@@ -101,11 +92,8 @@ void	ft_find_tens(char **file_contents, char *number_string, int index)
 	{
 		ft_putstr(letters);
 		ft_putchar(' ');
-		free(letters);
 	}
 	else
-	{
-		free(letters);
 		ft_putstr(DICT_ERROR);
-	}
+	free(letters);
 }
