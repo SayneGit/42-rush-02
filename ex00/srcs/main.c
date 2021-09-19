@@ -46,11 +46,11 @@ int	main(int argc, char **argv)
 
 	if (argc == 2)
 	{
-		ft_algo(ft_args(argv, 2), ft_int_to_string(parsed.parsed));
+		ft_algo(ft_args(argv, 1), ft_int_to_string(parsed.parsed));
 	}
 	else if (argc == 3)
 	{
-		ft_algo(ft_args(argv, 3), ft_int_to_string(parsed.parsed));
+		ft_algo(ft_args(argv, 2), ft_int_to_string(parsed.parsed));
 	}
 	else
 		ft_putstr(ARGS_ERROR);

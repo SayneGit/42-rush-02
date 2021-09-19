@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../../includes/ft_utils.h"
+#include <stdio.h>
 
 long int	ft_atoi(char *str)
 {
@@ -21,7 +22,7 @@ long int	ft_atoi(char *str)
 	i = 0;
 	signe = 1;
 	result = 0;
-	while ((str[i] == ' ') || ((str[i] >= 9) && (str[i] <= 13)))
+	while ((str[i] == ' ') || ((str[i] >= 9 && str[i] <= 13)))
 		i++;
 	while ((str[i] == '-') || (str[i] == '+'))
 	{
@@ -29,7 +30,7 @@ long int	ft_atoi(char *str)
 			signe *= -1;
 		i++;
 	}
-	while ((str[i] >= 48) && (str[i] <= 57))
+	while ((str[i] >= 48 && str[i] <= 57) && str[i])
 	{
 		result = result * 10 + (str[i] - 48);
 		i++;

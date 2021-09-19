@@ -24,7 +24,7 @@ OBJS = ${SOURCES:.c=.o}
 CC      = gcc
 RM      = rm -f
 
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g3
 
 $(NAME): ${OBJS}
 		gcc ${CFLAGS} -o ${NAME} ${OBJS}
