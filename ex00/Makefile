@@ -24,7 +24,7 @@ OBJS = ${SOURCES:.c=.o}
 CC      = gcc
 RM      = rm -f
 
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror
 
 $(NAME): ${OBJS}
 		gcc ${CFLAGS} -o ${NAME} ${OBJS}

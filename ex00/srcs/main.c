@@ -28,6 +28,7 @@ int	main(int argc, char **argv)
 	dest = ft_split(file_contents, "\n :");
 	ft_algo(dest, number_string);
 	printf("%u\n", result);
+	free(file_contents);
 	i = 0;
 	while (dest[i])
 	{
@@ -35,6 +36,5 @@ int	main(int argc, char **argv)
 		i += 1;
 	}
 	free(dest);
-	free(file_contents);
 	free(number_string);
 }
