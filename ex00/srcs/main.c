@@ -6,27 +6,24 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:44:36 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/19 11:44:08 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 16:05:29 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_utils.h"
 #include <stdio.h>
 
-void	ft_check_args(int argc, char **argv)
+void	ft_check_args(int argc, char **argv, int i)
 {
 	int			result;
 
-	if (argc == 2)
-	{
-		ft_parse(argv[2]);
-		result = ft_parse(argv[2]);
-		if (!ft_check_parsing_error(result))
-			ft_putstr(ARGS_ERROR);
-	}
+	ft_parse(argv[i]);
+	result = ft_parse(argv[i]);
+	if (!ft_check_parsing_error(result))
+		ft_putstr(ARGS_ERROR);
 }
 
-int	main(int argc, char **argv)
+void	ft_args(int argc, char **argv, int y)
 {
 	t_parsed	parsed;
 	char		**dest;
@@ -35,19 +32,25 @@ int	main(int argc, char **argv)
 	int			i;
 
 	i = 0;
-	file_contents = ft_read_file(argv[1], O_RDONLY);
-	if (argc == 2)
+	ft_check_args(argc, argv, y);
+	number_string = ft_int_to_string(parsed.parsed);
+	dest = ft_split(file_contents, "\n :");
+	while (dest[i])
 	{
-		ft_check_args(argc, argv);
-		number_string = ft_int_to_string(parsed.parsed);
-		dest = ft_split(file_contents, "\n :");
-		while (dest[i])
-		{
-			printf("%s\n", dest[i]);
-			i++;
-		}	
+		printf("%s\n", dest[i]);
+		i++;
 	}
 	free(file_contents);
+}
+
+int	main(int argc, char **argv)
+{
+	if (argc == 2)
+		ft_args(argc, argv, 2);
+	else if (argc == 3)
+		ft_args(argc, argv, 3);
+	else
+		ft_putstr(ARGS_ERROR);
 	return (0);
 }
 
