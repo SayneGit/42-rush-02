@@ -9,6 +9,7 @@ SOURCES 		= $(SOURCES_FOLDER)utils/ft_putchar.c \
 					$(SOURCES_FOLDER)utils/ft_strcpy.c \
 					$(SOURCES_FOLDER)utils/ft_rev_char_tab.c \
 					$(SOURCES_FOLDER)utils/ft_strcmp.c \
+					$(SOURCES_FOLDER)utils/ft_find_digit.c \
 					$(SOURCES_FOLDER)files/ft_get_letters.c \
 					$(SOURCES_FOLDER)files/ft_search_letters.c \
 					$(SOURCES_FOLDER)files/ft_files.c \
