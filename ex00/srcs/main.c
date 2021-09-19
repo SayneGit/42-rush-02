@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:44:36 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/19 17:25:10 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 20:55:09 by rgarcia          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ int	main(int argc, char **argv)
 	char		*file_contents;
 	char		*number_string;
 	int			i;
+	int			j;
 
 	(void) argc;
+	j = 0;
 	result = ft_parse(argv[1]);
 	number_string = ft_int_to_string(result);
 	file_contents = ft_read_file("numbers.dict", O_RDONLY);
@@ -35,6 +37,9 @@ int	main(int argc, char **argv)
 		free(dest[i]);
 		i += 1;
 	}
+	while (dest[i][j])
+		j++;
+	free(&dest[i][j]);
 	free(dest);
 	free(number_string);
 }
