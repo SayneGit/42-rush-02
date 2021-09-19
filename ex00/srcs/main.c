@@ -13,7 +13,7 @@
 #include "../includes/ft_utils.h"
 #include <stdio.h>
 
-void	ft_check_args(int argc, char *argv[])
+void	ft_check_args(int argc, char **argv)
 {
 	int			result;
 

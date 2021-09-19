@@ -28,6 +28,12 @@ CFLAGS = -Wall -Wextra -Werror
 $(NAME): ${OBJS}
 		gcc ${CFLAGS} -o ${NAME} ${OBJS}
 
-fclean: 
+all:	$(NAME)
+
+clean:
 		${RM} ${OBJS}
+
+fclean: clean
 		${RM} ${NAME}
+
+re: 	fclean all
