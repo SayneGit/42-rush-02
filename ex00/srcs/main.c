@@ -6,7 +6,7 @@
 /*   By: bsouleau <bsouleau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 11:44:36 by pcadiet           #+#    #+#             */
-/*   Updated: 2021/09/19 11:10:42 by bsouleau         ###   ########lyon.fr   */
+/*   Updated: 2021/09/19 11:44:08 by bsouleau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ int	main(int argc, char **argv)
 			i++;
 		}	
 	}
-	// ft_algo(dest, number_string)
 	free(file_contents);
 	return (0);
 }
+
+/* ft_algo(dest, number_string) */
